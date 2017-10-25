@@ -87,7 +87,7 @@ in which `visual-line-mode' is active as well."
 
 (defun visual-fill-column-mode--enable ()
   "Set up `visual-fill-column-mode' for the current buffer."
-  (add-hook 'window-configuration-change-hook #'visual-fill-column--adjust-window 'append 'local)
+  (add-hook 'window-configuration-change-hook #'visual-fill-column--adjust-window nil t)
   (visual-fill-column--adjust-window))
 
 (defun visual-fill-column-mode--disable ()
